@@ -1,0 +1,58 @@
+@import './default-variables.scss';
+
+.hide {
+    display: none;
+}
+
+.u-link {
+    color: $white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    text-transform: lowercase;
+    font-weight: 700;
+}
+
+.btn {
+    font-family: $default-font;
+    padding: .5rem 2rem;
+    border-radius: 20px;
+    color: $white;
+    border: 2px solid $white;
+    background-color: transparent;
+    text-transform: lowercase;
+    font-size: 1.15rem;
+
+    &:hover {
+        background-color: $white;
+        color: $midnight-green;
+    }
+
+    &--dark {
+        color: $sacramento-green;
+        border: 2px solid $sacramento-green;
+
+        &:hover {
+            background-color: $sacramento-green;
+            color: $white;
+        }
+    }
+
+    &--secondary {
+        color: $midnight-green;
+        border: 2px solid $midnight-green;
+        background-color: $white;
+
+        &:hover {
+            background-color: $rapture-blue;
+        }
+    }
+}
+
+.heading {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+
+    &__dark {
+        color: $sacramento-green;
+    }
+}
