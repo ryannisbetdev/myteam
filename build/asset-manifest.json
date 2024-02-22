@@ -1,10 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.6d58ca04.css",
-    "main.js": "/static/js/main.5c725e10.js",
+    "main.css": "/static/css/main.a93b4555.css",
+    "main.js": "/static/js/main.edfd804c.js",
     "static/media/avatar-kady.jpg": "/static/media/avatar-kady.78fc482c1b331d912ca1.jpg",
+    "static/media/avatar-drake.jpg": "/static/media/avatar-drake.737832017d812c5c01a9.jpg",
     "static/media/avatar-arthur.jpg": "/static/media/avatar-arthur.098c2e26b1c3fa071061.jpg",
     "static/media/avatar-aiysha.jpg": "/static/media/avatar-aiysha.e119a0c1a5a4d6a6d0bb.jpg",
+    "static/media/avatar-nikita.jpg": "/static/media/avatar-nikita.81886969b7b695a125fd.jpg",
+    "static/media/avatar-griffin.jpg": "/static/media/avatar-griffin.befbf0336c8bf00c29bb.jpg",
+    "static/media/avatar-cruz.jpg": "/static/media/avatar-cruz.81cd3556a3746ac5366d.jpg",
     "static/media/icon-person.svg": "/static/media/icon-person.0a313a85e4148d7ea17f5657dbbffa33.svg",
     "static/media/icon-cog.svg": "/static/media/icon-cog.c5d2403fc5d7754badaf2da8c88d8b35.svg",
     "static/media/logo.svg": "/static/media/logo.9e687f65b84bdaad178f8a42a249e298.svg",
@@ -16,11 +20,11 @@
     "static/media/bg-pattern-home-2.svg": "/static/media/bg-pattern-home-2.889d5d8c448ed043a71b.svg",
     "static/media/bg-pattern-home-5.svg": "/static/media/bg-pattern-home-5.95a2a6211526850cef55.svg",
     "static/media/bg-pattern-home-4-about-3.svg": "/static/media/bg-pattern-home-4-about-3.aacd4e03b04df33749ba.svg",
-    "main.6d58ca04.css.map": "/static/css/main.6d58ca04.css.map",
-    "main.5c725e10.js.map": "/static/js/main.5c725e10.js.map"
+    "main.a93b4555.css.map": "/static/css/main.a93b4555.css.map",
+    "main.edfd804c.js.map": "/static/js/main.edfd804c.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d58ca04.css",
-    "static/js/main.5c725e10.js"
+    "static/css/main.a93b4555.css",
+    "static/js/main.edfd804c.js"
   ]
 }

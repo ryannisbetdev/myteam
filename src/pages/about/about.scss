@@ -1,0 +1,84 @@
+// Import common styles
+@import '../../styles/common.scss';
+
+.directors {
+    &__container {
+        padding-block-end: 5rem;
+        background: url('../../assets/bg-pattern-home-4-about-3.svg') bottom right no-repeat;
+    };
+}
+
+.about {
+    &__hero {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    &__clients {
+        display: flex;
+        flex-direction: column;
+        background-color: $dark-green;
+        background-image: url('../../assets/bg-pattern-home-3.svg') bottom right no-repeat;
+        gap: 2rem;
+        padding: 3rem;
+        text-align: center;
+    }
+
+    &__heading {
+        font-size: 3rem;
+    }
+}
+
+.clients {
+    &__logos {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        align-items: center;
+    }
+}
+
+// Tablet styles
+@media only screen and (min-width: 768px) {
+    
+    .directors {
+        &__container {
+            display: flex; 
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        &__card {
+            width: 400px;
+        }
+    }
+}
+
+// Large desktop styles
+@media only screen and (min-width: 1601px) {
+    .about {
+        &__hero {
+            display: flex;
+            justify-content: space-around;
+            text-align: left;
+        }
+
+        &__heading {
+            font-size: 7rem;
+        }
+
+        &__text {
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 5rem;
+                height: 0.5rem;
+                background-color: $coral;
+                margin: 1rem auto 0;
+                position: absolute;
+                inset-block-start: -3rem;
+            }
+        }
+    }
+}

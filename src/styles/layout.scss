@@ -6,6 +6,7 @@ body {
     background-color: $midnight-green;
     color: $white;
     font-family: $default-font;
+
 }
 
 /* Navigation when open */
@@ -34,18 +35,17 @@ body {
 
 /* Navigation styles */
 .navigation {
-    position: absolute;
+    position: fixed;
     background-color: $police-blue;
     inset-inline-end: -100%; 
     inset-block-start: 0;
     margin: 0;
     height: 100%;
-    width: 50%;
-    overflow: hidden;
     list-style: none;
     padding: 4rem;
-    transition: inset-inline-end 0.3s ease-in-out;
+    transition: inset-inline-end 0.3s ease-in-out, width 0.3s ease-in-out;
     z-index: 100;
+
     
     .header__icon {
         display: none;
@@ -75,6 +75,10 @@ body {
             inset-block-start: 2.5rem;
         }
     }
+}
+
+body.open-menu {
+    overflow-x: hidden;
 }
 
 /* Footer styles */
@@ -128,6 +132,7 @@ body {
         background-image: none;
         background-color: transparent;
         align-items: center;
+        inset-inline-end: unset;
 
         &__container {
             display: flex;
