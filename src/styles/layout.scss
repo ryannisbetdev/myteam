@@ -1,9 +1,20 @@
-@import 'common.scss';
+// Default variables and mixins import
+@import './default-variables.scss';
 
+/* Body styles */
 body {
     background-color: $midnight-green;
+    color: $white;
+    font-family: $default-font;
 }
 
+/* Navigation when open */
+.navigation-open {
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Header styles */
 .header {
     &__container {
         display: flex;
@@ -17,28 +28,28 @@ body {
         border: 0;
         color: $white;
         font-size: 2rem;
-
-        &.close {
-            position: absolute;
-            inset-inline-end: 1rem;
-            inset-block-start: 3rem;
-        }
+        cursor: pointer;
     }
 }
 
+/* Navigation styles */
 .navigation {
     position: absolute;
     background-color: $police-blue;
-    inset-inline-end: 0;
+    inset-inline-end: -100%; 
     inset-block-start: 0;
     margin: 0;
     height: 100%;
-    width: 40%;
+    width: 50%;
+    overflow: hidden;
     list-style: none;
-    padding: 4rem 4rem;
-    background-image: url('../assets/bg-pattern-about-1-mobile-nav-1.svg');
-    background-repeat: no-repeat;
-    background-position: 200% 80%;
+    padding: 4rem;
+    transition: inset-inline-end 0.3s ease-in-out;
+    z-index: 100;
+    
+    .header__icon {
+        display: none;
+    }
 
     &__overlay {
         width: 100vw;
@@ -47,14 +58,26 @@ body {
         position: absolute;
         inset-inline-end: 0;
         inset-block-end: 0;
-        overflow: hidden;
+        transition: background-color 0.3s ease-in-out;
     }
 
     &__item {
-        padding: 1rem 0;       
+        padding: 1rem 0;
+    }
+
+    &.open {
+        inset-inline-end: 0;
+
+        .header__icon {
+            display: block;
+            position: absolute;
+            inset-inline-end: 2rem;
+            inset-block-start: 2.5rem;
+        }
     }
 }
 
+/* Footer styles */
 .footer {
     &__top {
         background-image: url('../assets/bg-pattern-home-6-about-5.svg');
@@ -63,13 +86,16 @@ body {
         padding: 6rem 1rem;
         text-align: center;
         background-position: 0 110%;
+        display: flex; 
+        justify-content: space-evenly; 
+        align-items: center; 
+        flex-direction: column;
     }
 
     &__bottom {
         background-color: $sacramento-green;
         padding: 2rem 1rem;
         text-align: center;
-        color: $white;
     }
 
     &__nav {
@@ -84,20 +110,98 @@ body {
     }
 }
 
-
-// Tablet styles
+/* Tablet styles */
 @media only screen and (min-width: 768px) {
+    .header__icon {
+        display: none;
+    }
+
+    .header__container {
+        justify-content: left;
+    }
+
+    .navigation {
+        width: 100%;
+        height: auto;
+        display: flex;
+        position: relative;
+        background-image: none;
+        background-color: transparent;
+        align-items: center;
+
+        &__container {
+            display: flex;
+            width: 100%;
+        }
+
+        &__overlay {
+            display: none;
+        }
+
+        &__item {
+            padding: 0 2.5rem;
+            font-size: 1.5rem;
+        }
+
+        &__btn {
+            margin-inline-start: auto;
+            padding: 0;
+        }
+    }
+
     .footer {
         &__top {
+            flex-direction: row;
+
+            .heading {
+                font-size: 4rem;
+            }
+
+            .btn {
+                font-size: 2rem;
+                border-radius: 50px;
+            }
+        }
+
+        &__bottom {
             display: flex;
             justify-content: space-evenly;
-            align-items: center;
         }
     }
 }
 
-// Desktop styles
+/* Desktop styles */
 @media only screen and (min-width: 1280px) {}
 
-// Large desktop styles
-@media only screen and (min-width: 1440px) {}
+/* Large desktop styles */
+@media only screen and (min-width: 1601px) {
+    .navigation {
+        margin-inline-start: 3rem;
+
+        &__item {
+            font-size: 2rem;
+
+            .btn {
+                font-size: 1.75rem;
+                border-radius: 30px;
+            }
+        }
+    }
+
+    .footer {
+        &__bottom {
+            justify-content: space-between;
+            text-align: right;
+            padding: 2rem 3rem;
+            font-size: 1.5rem;
+        }
+
+         &__item {
+            padding: 1rem;
+         }
+
+         &__navWrap {
+            text-align: center;
+         }
+    }
+}

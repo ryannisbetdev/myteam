@@ -7,13 +7,11 @@
 .u-link {
     color: $white;
     text-decoration: none;
-    font-size: 1.25rem;
     text-transform: lowercase;
     font-weight: 700;
 }
 
 .btn {
-    font-family: $default-font;
     padding: .5rem 2rem;
     border-radius: 20px;
     color: $white;
@@ -21,6 +19,8 @@
     background-color: transparent;
     text-transform: lowercase;
     font-size: 1.15rem;
+    font-weight: 600;
+    cursor: pointer;
 
     &:hover {
         background-color: $white;
@@ -50,9 +50,16 @@
 
 .heading {
     font-size: 2.5rem;
-    line-height: 2.5rem;
 
     &__dark {
         color: $sacramento-green;
+    }
+
+    .highlight {
+        color: $coral;
+
+        &.blue {
+            color: $rapture-blue;
+        }
     }
 }
