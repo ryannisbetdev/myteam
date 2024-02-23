@@ -150,9 +150,8 @@
         &__hero {
             text-align: left;
             align-items: center;
-            background-position: bottom right;
-            padding: 5rem 3rem 15rem;
-            background-size: 20%;
+            background: url('../../assets/bg-pattern-home-2.svg') no-repeat bottom right, url('../../assets/bg-pattern-home-1.svg') no-repeat -5% 10%;
+            padding: 5rem 10rem 15rem;
         }
 
         &__build {
@@ -173,12 +172,23 @@
 
     .hero {
         &__heading {
-            font-size: 7rem;
+            font-size: 8rem;
         }
 
         &__text {
             width: 50%;
             font-size: 2.5rem;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 5rem;
+                height: 0.5rem;
+                background-color: $rapture-blue;
+                margin: 1rem auto 0;
+                position: absolute;
+                inset-block-start: -3rem;
+            }
         }
     }
 

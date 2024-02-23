@@ -26,7 +26,7 @@ const Header = () => {
                     <button onClick={toggleMenu} className="header__icon close material-symbols-outlined">close</button>
                     <li className="navigation__item"><a href="/" className="u-link">Home</a></li>
                     <li className="navigation__item"><a href="/about" className="u-link">About</a></li>
-                    <li className="navigation__item navigation__btn "><button className="btn">Contact us</button></li>
+                    <li className="navigation__item navigation__btn "><a href="/contact" className="btn">Contact us</a></li>
              </ul>
 
         </nav>

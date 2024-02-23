@@ -1,13 +1,22 @@
 import Logo from '../../assets/logo.svg';
 import '../../styles/layout.scss';
 
+import Twitter from '../../assets/icon-twitter.svg';
+import Facebook from '../../assets/icon-facebook.svg';
+import Pinterest from '../../assets/icon-pinterest.svg';
+
 const Footer = () => {
+    const currentUrl = window.location.pathname;
+
     return (
         <footer className="footer__container">
-            <div className="footer__top">
-                <h1 className="heading heading__dark">Ready to get started?</h1>
-                <a className="btn btn--dark">Contact us</a>
-            </div>
+            {/* don't render this on the contact page */}
+            {currentUrl !== '/contact' && (
+                <div className="footer__top">
+                    <h1 className="heading heading__dark">Ready to get started?</h1>
+                    <a href="/contact" className="btn btn--dark">Contact us</a>
+                </div>
+            )}
 
             <div className="footer__bottom">
                 <section className="footer__navWrap">
@@ -25,11 +34,22 @@ const Footer = () => {
                         <p>California 92714</p>
                         <p>Call Us : 949-833-7432</p>
                     </div>
+                    
+                </section>
 
-                    <p className="footer__copyright"> Copyright 2024. All Rights Reserved.</p>
+                <section className="footer__socialsWrap">
+
+                    <p>Website developed by Ryan Nisbet.</p>
+
+                    <div className="footer__socials">
+                        <img src={Twitter} alt="twitter" className="footer__social" />
+                        <img src={Facebook} alt="facebook" className="footer__social" />
+                        <img src={Pinterest} alt="pinterest" className="footer__social" />
+                    </div>
                 </section>
             </div>
         </footer>
     );
-    }
+}
+
 export default Footer;
